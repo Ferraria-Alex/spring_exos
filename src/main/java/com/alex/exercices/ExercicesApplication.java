@@ -23,5 +23,8 @@ public class ExercicesApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println(hwService.getHelloWorld().toString());
 		livreService.add();
+		livreService.add();
+		livreService.remove();
+		livreService.findAll();
 	}
 }

@@ -3,14 +3,16 @@ package com.alex.exercices.model;
 public class Livre {
     private String title;
     private String description;
-    private String PublicationDate;
+    private String publicationDate;
+    private String genre;
 
     public Livre(){}
 
-    public Livre(String title, String description, String publicationDate) {
+    public Livre(String title, String description, String publicationDate, String genre) {
         this.title = title;
         this.description = description;
-        this.PublicationDate = publicationDate;
+        this.publicationDate = publicationDate;
+        this.genre = genre;
     }
 
     public String getTitle() {
@@ -30,11 +32,19 @@ public class Livre {
     }
 
     public String getPublicationDate() {
-        return PublicationDate;
+        return publicationDate;
     }
 
     public void setPublicationDate(String publicationDate) {
-        PublicationDate = publicationDate;
+        this.publicationDate = publicationDate;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
@@ -42,7 +52,7 @@ public class Livre {
         return "Livre{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", PublicationDate='" + PublicationDate + '\'' +
+                ", PublicationDate='" + publicationDate + '\'' +
                 '}';
     }
 }
