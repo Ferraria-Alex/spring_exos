@@ -24,6 +24,13 @@ public class LivreService {
         this.livres = livres;
     }
 
+    @Override
+    public String toString() {
+        return "LivreService{" +
+                "livres=" + livres +
+                '}';
+    }
+
     public void add() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the livre: ");
@@ -53,10 +60,9 @@ public class LivreService {
         return null;
     }
 
-    public List<Livre> findAll() {
+    public void findAll() {
         for (Livre livre : livres) {
             System.out.println(livre);
         }
-        return this.getLivres();
     }
 }
